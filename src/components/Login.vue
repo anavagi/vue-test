@@ -24,14 +24,20 @@ export default{
         async login(){
             let result = await axios.get(`http://localhost:3000/users?email=${this.email}&password=${this.password}`)
             // console.warn(result);
-            if(result.status == 200 && result.data.lenght > 0 ){
+            if(result.status == 200 && result.data.length>0 ){
                 console.warn(result);
                 // same name than is defined in the route
                 this.$router.replace({ name: 'HomeRoute' })
-                // localStorage.setItem("user-info", JSON.stringify(result.data[0]));
+                localStorage.setItem("user-info", JSON.stringify(result.data[0]));
             }
         }
-        
+    },
+    mounted()
+    {
+      let user = localStorage.getItem('user-info');
+      if(user){
+        this.$router.push({ name: 'HomeRoute' });
+      }
     }
 }
 

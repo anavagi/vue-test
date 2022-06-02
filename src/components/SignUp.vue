@@ -37,17 +37,17 @@ export default{
         if(result.status == 201){
           // same name than is defined in the route
           this.$router.push({ name: 'HomeRoute' })
-          // localStorage.setItem("user-info", JSON.stringify(result.data));
+          localStorage.setItem("user-info", JSON.stringify(result.data));
         }
       }
     },
     // Funcion para trabajar con los datos en el localStorage
-    // mounted(){
-    //   let user = localStorage.getItem('user-info');
-    //   if(user){
-    //     this.$router.push({ name: 'HomeRoute' });
-    //   }
-    // }
+    mounted(){
+      let user = localStorage.getItem('user-info');
+      if(user){
+        this.$router.push({ name: 'HomeRoute' });
+      }
+    }
 }
 
 </script>
