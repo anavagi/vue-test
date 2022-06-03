@@ -1,0 +1,18 @@
+.nav{
+    background-color:skyblue;
+    overflow: hidden;
+}
+.nav a {
+    float: left;
+    color: black;
+    padding: 16px;
+    font-size: 17px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+.nav a:hover{
+    text-decoration: underline;
+}
+.profile{
+    float: right;
+}

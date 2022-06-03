@@ -26,5 +26,25 @@
       "email": "test",
       "id": 5
     }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Burger King",
+      "contact": 11111111,
+      "address": "Noida sector 50"
+    },
+    {
+      "id": 2,
+      "name": "Dominos",
+      "contact": 222222222,
+      "address": "Gurdeog sector 50"
+    },
+    {
+      "id": 3,
+      "name": "KFC",
+      "contact": 333333333,
+      "address": "ssdfsf sector 23"
+    }
   ]
 }
